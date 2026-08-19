@@ -17,14 +17,13 @@ This project investigates normal versus suspicious Windows logon activity on a W
 - Practice professional documentation of an investigation
 
 ## Activity Performed
-Normal successful logons were first generated. Then multiple failed logon attempts were performed against the local account “gabriel” by intentionally entering incorrect passwords. After the failed attempts, successful logons were completed with the correct password.
+Normal successful logons were first generated. Then multiple failed logon attempts were performed against the local account “gabriel” by intentionally entering incorrect passwords. After the failed attempts, a successful logon was completed with the correct password.
 
 ## Timeline of Events
 - 6:21:56 PM – Failed logon attempt for account “gabriel” (Event ID 4625)
 - 6:22:06 PM – Failed logon attempt for account “gabriel” (Event ID 4625)
 - 6:22:34 PM – Failed logon attempt for account “gabriel” (Event ID 4625)
 - 6:26:07 PM – Successful logon for account “gabriel” (Event ID 4624)
-- 6:26:08 PM – Successful logon for account “gabriel” (Event ID 4624)
 
 All observed logon attempts (failed and successful) were Logon Type 2 (Interactive).
 
@@ -35,11 +34,11 @@ All observed logon attempts (failed and successful) were Logon Type 2 (Interacti
 ![Failed Logon 2](screenshots/Screenshot%202026-08-18%20183740.png)
 ![Failed Logon 3](screenshots/Screenshot%202026-08-18%20183822.png)
 
-### Successful Logons (Event ID 4624)
+### Successful Logon (Event ID 4624)
 ![Successful Logon 1](screenshots/Screenshot%202026-08-18%20184544.png)
 
 ## Analysis
-Between 6:21 PM and 6:22 PM, multiple failed logon attempts occurred for the local account “gabriel”. The failure reason recorded was “Unknown user name or bad password.” A few minutes later, at 6:26 PM, successful interactive logons (Logon Type 2) were recorded for the same account.
+Between 6:21 PM and 6:22 PM, multiple failed logon attempts occurred for the local account “gabriel”. The failure reason recorded was “Unknown user name or bad password.” A few minutes later, at 6:26 PM, a successful interactive logon (Logon Type 2) was recorded for the same account.
 
 This pattern is consistent with password guessing or a low-and-slow brute-force attempt followed by successful authentication. In a real environment, this activity would warrant further investigation, including reviewing the source of the attempts and confirming whether account lockout policies were effective.
 
