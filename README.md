@@ -37,7 +37,6 @@ All observed logon attempts (failed and successful) were Logon Type 2 (Interacti
 
 ### Successful Logons (Event ID 4624)
 ![Successful Logon 1](screenshots/Screenshot%202026-08-18%20184544.png)
-![Successful Logon 2](screenshots/Screenshot%202026-08-18%20184754.png)
 
 ## Analysis
 Between 6:21 PM and 6:22 PM, multiple failed logon attempts occurred for the local account “gabriel”. The failure reason recorded was “Unknown user name or bad password.” A few minutes later, at 6:26 PM, successful interactive logons (Logon Type 2) were recorded for the same account.
