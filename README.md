@@ -29,9 +29,15 @@ Normal successful logons were first generated. Then multiple failed logon attemp
 All observed logon attempts (failed and successful) were Logon Type 2 (Interactive).
 
 ## Key Evidence
-Screenshots of the following events are included in this repository:
-- Three Event ID 4625 (failed logon) events showing “Unknown user name or bad password”
-- Three Event ID 4624 (successful logon) events for the account “gabriel”
+
+### Failed Logons (Event ID 4625)
+![Failed Logon 1](screenshots/Screenshot%202026-08-18%20183559.png)
+![Failed Logon 2](screenshots/Screenshot%202026-08-18%20183740.png)
+![Failed Logon 3](screenshots/Screenshot%202026-08-18%20183822.png)
+
+### Successful Logons (Event ID 4624)
+![Successful Logon 1](screenshots/Screenshot%202026-08-18%20184544.png)
+![Successful Logon 2](screenshots/Screenshot%202026-08-18%20184754.png)
 
 ## Analysis
 Between 6:21 PM and 6:22 PM, multiple failed logon attempts occurred for the local account “gabriel”. The failure reason recorded was “Unknown user name or bad password.” A few minutes later, at 6:26 PM, successful interactive logons (Logon Type 2) were recorded for the same account.
